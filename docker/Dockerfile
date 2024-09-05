@@ -5,7 +5,7 @@ FROM golang:1.22-alpine3.19 AS builder
 COPY . /build/
 RUN cd /build && ./build.sh
 
-FROM alpine:3.19
+FROM alpine:3.20
 
 RUN apk add --no-cache bash curl jq git ffmpeg \
 	# Python for python bridges
